@@ -14,6 +14,10 @@ body{
     background-color: hsl(31, 55%, 85%)
 }
 
+main{
+    height: 100vh;
+}
+
 section{
     width: 400px;
     height: 700px;
@@ -27,6 +31,8 @@ section{
     transform: translate(-50%, -50%);
 }
 
+#mobili{display: block;}/*Abilita tamanho de imagem para mobili*/
+#pc{display: none;}/*Desabilida tamanho de imagem para pc*/
 img{
     width: 400px;
     height: 250px;
@@ -41,7 +47,7 @@ h1{
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 1em;
-    letter-spacing: 3px;
+    letter-spacing: 7px;
     text-transform: uppercase;
 }
 
@@ -89,7 +95,7 @@ p{
 
 #button{
     margin: auto;
-    width: 50vw;
+    width: 300px;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
@@ -105,4 +111,39 @@ p{
 
     font-family:'Montserrat' ;
     font-weight: bolder;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center;
+ }
+.attribution a {
+     color: hsl(228, 45%, 44%);
+ }
+
+
+ /*Versão para desktop*/
+
+@media screen and (min-width: 1200px) and (max-width:2400px){
+    section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        width: 750px;
+        height: 500px;
+    }
+
+    #mobili{display: none;}/*Bloqueia tamanho de imagem para mobili*/
+    #pc{display: block;}/*Habilita tamanho de imagem para pc*/
+    img{
+        height: 500px;
+        border-radius: 20px 0px 0px 20px;
+    }
+
+    h2{
+        line-height: 35px ;
+    }
+
+    #button{
+        width: 250px;
+    }
 }
